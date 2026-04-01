@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grumpy Bagels</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">
+            <a href="home.html">
+                <img src="beige logo.png" alt="Grumpy Bagels Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="menu_main.html">MENU</a></li>
+                <li><a href="store.html">STORE</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="social.html">SOCIALS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Navigation for Main Categories -->
+    <section class="main-nav">
+        <div class="nav-item">
+            <a href="menu_main.html"><img src="main_menu.png" alt="Main"></a>
+            <p>MAIN</p>
+        </div>
+        <div class="nav-item">
+            <a href="menu_bagels.html"><img src="bagel_menu.png" alt="Bagels" style="width: 120px; height: 100px; border-radius: 50%; transition: transform 0.3s;">
+        </a>
+            <p>BEGELS</p>
+        </div>
+        <div class="nav-item">
+            <a href="manu_drinks.html"><img src="drink_menu.png" alt="Drinks"></a>
+            <p>DRINKS</p>
+        </div>
+    </section>
+    
+
+    <!-- Main  -->
+    <main>
+        <section class="content2">
+            <p>BEGELS</p>
+        </section>
+    </main>
+    
+ <!-- Menu Grid -->
+<section class="menu">
+    <div class="menu-item">
+        <a href="grumpy-breakfast.html">
+            <img src="breakfast.png" alt="Grumpy Breakfast">
+        </a>
+        <p>GRUMPY BREAKFAST</p>
+    </div>
+    <div class="menu-item">
+        <a href="tuna-melt.html">
+            <img src="tuna.png" alt="Tuna Melt Bagel">
+        </a>
+        <p>TUNA MELT BAGEL</p>
+    </div>
+    <div class="menu-item">
+        <a href="bec-bagel.html">
+            <img src="bec.png" alt="B.E.C Bagel">
+        </a>
+        <p>B.E.C BAGEL</p>
+    </div>
+    <div class="menu-item">
+        <a href="french-bagel.html">
+            <img src="grandma.png" alt="Grandma’s French Bagel">
+        </a>
+        <p>GRANDMA'S FRENCH BAGEL</p>
+    </div>
+    <div class="menu-item">
+        <a href="honey-bee.html">
+            <img src="breakfast.png" alt="Honey Bee Bagel">
+        </a>
+        <p>HONEY BEE BAGEL</p>
+    </div>
+    <div class="menu-item">
+        <a href="shashuka-bowl.html">
+            <img src="breakfast.png" alt="Shashuka Bowl">
+        </a>
+        <p>SHASHUKA BOWL</p>
+    </div>
+    <div class="menu-item">
+        </a>
+        <p></p>
+    </div>
+    <div class="menu-item">
+        </a>
+        <p></p>
+    </div>
+</section>
+
+
+       <!-- Footer -->
+       <footer>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/grumpybagels/?hl=en" class="instagram">INSTAGRAM</a>
+            <a href="https://www.google.com/search?client=safari&sca_esv=dd0a4f192a683669&hl=en-sg&q=Grumpy+Bagels&ludocid=4565090157192772874&lsig=AB86z5X5wnjEY7FZJ5fTctg2qrCE&kgs=9ca6f9a5cb0c8ba4&shndl=-1&shem=lcsnce,lnolc,lsp&source=sh/x/loc/act/m1/3">CONTACT</a>
+        </div>
+        <p>&copy; ALL RIGHTS RESERVED @ 2024 GRUMPY BAGELS</p>
+    </footer>
+</body>
+</html>

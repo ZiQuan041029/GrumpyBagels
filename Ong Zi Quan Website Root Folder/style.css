@@ -1,0 +1,825 @@
+/* Header */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #3C2417;
+    color: #EDD4B5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align nav to the bottom */
+    background-color: #3C2417;
+    padding: 10px 40px; /* Reduced padding for a smaller header */
+    border-bottom: 1px solid #EDD4B5; /* Thin bottom border */
+}
+
+/* Logo Styling */
+header .logo {
+    display: flex;
+    align-items: flex-end; /* Align logo at the bottom */
+}
+
+header .logo img {
+    height: 150px; /* Make the logo larger */
+    width: auto; /* Maintain aspect ratio */
+    margin-bottom: -30px; /* Move the logo down */
+}
+
+/* Navigation Styles */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Reduced spacing between links */
+    margin-bottom: 0px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #EDD4B5;
+    font-size: 16px; /* Larger font size for links */
+    letter-spacing: 1px; /* Subtle spacing between letters */
+    text-transform: uppercase;
+    position: relative; /* Position for the left shift */
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+    left: -320px; /* Shift the link to the left (adjust the value as needed) */
+}
+
+/* Hover Effect */
+header nav ul li a:hover {
+    color: #B15427; /* Highlight color on hover */
+}
+
+header nav ul li a::after {
+    content: ''; /* Empty content for underline */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Distance from text */
+    height: 2px; /* Thickness of underline */
+    background-color: #B15427; /* Color of underline */
+    transform: scaleX(0); /* Start with no underline */
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1); /* Expand underline on hover */
+}
+
+/* Home Main Layout */
+main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #3C2417;
+}
+
+.content {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content p {
+    font-family: 'Athelas', serif; /* Use Athelas font */
+    font-size: 35px;
+    font-weight: bold; /* Bold text */
+    line-height: 1.3; /* Reduces vertical spacing between lines */
+    letter-spacing: 0.5px; /* Slightly reduces horizontal space between letters */
+    color: #EDD4B5; /* Text color */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0; /* Removed invalid negative padding */
+}
+
+.image {
+    flex: 1;
+    margin-right: 100px;
+}
+
+.image img {
+    width: 119.2%;
+    height: 100%;
+    object-fit: cover;
+    border-left: 1px solid #EDD4B5; /* Fixing the border-left style */
+}
+
+/* Main Content Styling */
+.content2 {
+    font-size: 20px;
+    flex: 1;
+    margin: 0;
+    padding: 5px 0 0 0; /* Smaller top padding */
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px; /* This will push the content to the right */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
+
+
+
+
+
+/* Menu */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px;
+    border-bottom: 1px solid #EDD4B5;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
+
+.main-nav .nav-item {
+    text-align: center;
+}
+
+.main-nav .nav-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    margin-top: -10px;
+}
+
+.main-nav .nav-item img:hover {
+    transform: scale(1.1);
+}
+
+.main-nav .nav-item p {
+    color: #EDD4B5;
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+/* Menu Grid */
+.menu {
+    margin-bottom: 50px; /* Adjust the value as needed */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */ 
+    grid-auto-rows: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu-item {
+    border: 1px solid #EDD4B5; /* Border around items */
+    box-sizing: border-box; /* Ensures borders fit perfectly */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3C2417; /* Match background color */
+    height:300px; /* Adjust to the desired height */
+}
+
+.menu-item img {
+    width: 100%; /* Ensure the image fits within the grid */
+    height: 180px; /* Set consistent image height */
+    object-fit: cover; /* Maintain image aspect ratio */
+    transition: transform 0.3s ease;
+    margin-bottom: -230px;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+    
+.menu-item p {
+    margin: 10px 0; /* Keep minimal spacing for text */
+    font-size: 14px;
+    color: #EDD4B5;
+    position: relative; /* Make the element positioned relative to its normal position */
+    top: 230px; /* Move the text down by 250px (adjust as needed) */
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
+
+/* Target the last box */
+.menu-item:last-child {
+    border-bottom: 1px solid #EDD4B5; /* Bottom border */
+    border-right: 1px solid #EDD4B5; /* Right border */
+}
+
+/* Reset default margins, padding, and set font family */
+body, h2, .p1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Avenir Roman', sans-serif; /* Avenir Roman font */
+    color: #3C2417; /* Set all text to color #3C2417 */
+}
+
+/* Style for the main container that holds both boxes */
+.menu-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding: 0;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* Container for the two boxes, ensuring equal width */
+.contnet3 {
+    display: flex;
+    width: 100%; /* Stretch the container to full width */
+}
+
+/* Styling for the image box on the left */
+.menu-box {
+    flex: 1;  /* Take up equal space */
+    background-color: #3C2417; /* Dark brown background */
+    min-height: 100vh;  /* Take up full height */
+    padding: 20px;  /* Padding for inner spacing */
+}
+
+/* Responsive image style to make sure it fills the box */
+.menu-box img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 70px;
+}
+
+/* Styling for the text box on the right */
+.menu-des {
+    flex: 1;  /* Take up equal space */
+    padding: 20px;
+    background-color: #EDD4B5;  /* Light beige background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    text-align: left; /* Align the text to the left */
+}
+
+/* Title styling for h2 (previously h1) */
+h2 {
+    font-size: 2.3em; /* Make the title bigger */
+    margin-bottom: 10px; /* Space below the title */
+    font-weight: normal; /* Remove boldness */
+    margin-bottom: 30px;
+}
+
+/* Styling for breadcrumb links */
+.breadcrumb a {
+    color: #3C2417; /* Set link color to match the page's theme */
+    text-decoration: none; /* Remove underline */
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* Underline on hover for better interactivity */
+}
+
+.breadcrumb {
+    font-size: 14px;
+    color: #3C2417; /* Subtle gray color */
+    margin-bottom: 20px;
+}
+
+/* Styling for the paragraph (styled as p1) */
+.p1 {
+    font-size: 1em; /* Set a normal size for the paragraph */
+    line-height: 1.5; /* Improve readability with line-height */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 30px;
+}
+
+/* Styling for the previous and next navigation links */
+.pre-next a {
+    color: #3C2417; /* Dark brown color for links */
+    text-decoration: none;
+}
+
+/* Hover effect for the navigation links */
+.pre-next a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the previous/next link container */
+.pre-next {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start; /* Align "previous" link left */
+    gap: 40px; /* Space between the links */
+}
+
+
+
+
+
+/* About */
+.about-container img {
+    width: 100%; /* Make the image take up the full width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove extra spacing under the image */
+}
+
+/* About Text Styling */
+.about-text {
+    border-top: 1px solid #EDD4B5; /* Solid line on top */
+    border-bottom: 1px solid #EDD4B5; /* Solid line at the bottom */
+    background-color: #3C2417; /* Brown background */
+    color: #EDD4B5; /* Light text color */
+    padding: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold; /* Bold text */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.about-text1 {
+    border-top: 1px solid #EDD4B5; /* Solid line on top */
+    background-color: #3C2417; /* Brown background */
+    color: #EDD4B5; /* Light text color */
+    padding: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold; /* Bold text */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+
+
+
+
+/*Store*/
+
+/* Full-Width Photo Styling */
+.location-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Remove the border-bottom to match the uploaded image */
+}
+  
+/* Information Section */
+.location-info {
+    display: flex;
+    justify-content: space-between; /* Even spacing between sections */
+    align-items: center;
+    padding: 20px 40px; /* Add consistent padding for spacing */
+    background-color: #3C2417;
+}
+  
+/* Left Section */
+.info-left h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+  
+.info-left p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+  
+/* Center Section */
+.info-center p {
+    margin: 0;
+    font-size: 0.9em;
+    text-align: left; /* Align text to the left */
+    line-height: 1.5; /* Adjust line spacing for better readability */
+    max-width: 120%; /* Ensure it spans the available width */
+    word-wrap: break-word; /* Break long words if needed */
+    margin-right: 80px;
+    margin-left: -90px;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+    word-spacing: 1px;
+}
+
+  
+/* Right Section */
+.info-right .view-map {
+    text-decoration: none;
+    color: #EDD4B5;
+    font-size: 1em;
+    position: relative; /* Required for the animation */
+    padding-bottom: 2px;
+}
+/* Right Section */
+.info-right .view-map {
+    text-decoration: none;
+    color: #EDD4B5;
+    font-size: 1em;
+    position: relative; /* Required for the animation */
+    padding-bottom: 2px;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
+  
+.info-right .view-map::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #EDD4B5;
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+  
+.info-right .view-map:hover::after {
+    width: 100%; /* Animate the underline from left to right */
+}
+  
+.info-right .view-map:hover {
+    color: #CFA981; /* Change text color on hover */
+}
+
+/* Remove default body margins */
+body {
+    margin: 0;
+}
+
+/* Section for Image Boxes */
+.image-box-section {
+    margin: 0;
+    width: 100%; /* Full width of the page */
+    border: 1px solid #ccc; /* Border surrounding the entire section */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Ensures borders don't overflow the page width */
+    margin-top: 20px;
+}
+
+/* Top Image Box */
+.top-box {
+    border-bottom: 1px solid #ccc; /* Border between top and bottom boxes */
+}
+
+.top-box img {
+    width: 100%; /* Full width */
+    height: auto;
+    display: block;
+}
+
+/* Bottom Image Boxes */
+.bottom-boxes {
+    display: flex;
+    width: 100%; /* Full width of the page */
+}
+
+.bottom-box {
+    flex: 1; /* Equal width for both boxes */
+    border-right: 1px solid #ccc; /* Divider between the two bottom boxes */
+}
+
+.bottom-box:last-child {
+    border-right: none; /* Removes the right border from the last box */
+}
+
+.bottom-box img {
+    width: 100%; /* Full width */
+    height: 500px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/*Projects*/
+/* Laneige Section Styling */
+.laneige-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    margin: 50px 0;
+  }
+  
+  /* Images */
+  .laneige-image img {
+    width: 250px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-right: 30px;
+  }
+
+  .laneige-image2 img {
+    width: 250px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-top: -80px;
+    margin-bottom: -60px;
+    margin-left: -30px;
+  }
+  
+  /* Center Text */
+  .laneige-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #EDD4B5; /* Beige color */
+    font-family: 'Athelas', serif; /* Elegant serif font */
+    margin-right: 60px;
+  }
+
+  /* Section for Bagels and Flower Images */
+.bagels.and.flower {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images vertically */
+    height: 100vh; /* Make the container fill 100% of the viewport height */
+    width: 100%; /* Make the container fill 100% of the width */
+    border: 1px solid #EDD4B5; /* Add border around the whole section */
+  }
+  
+  /* Flower Image Container */
+  .flower {
+    width: 50%; /* Each image container takes 50% of the width */
+    height: 100%; /* Make the container fill 100% of the height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove any internal padding */
+    border-right: 1px solid #EDD4B5; /* Add a border to the right of each image container */
+  }
+  
+  /* Remove border from the last image container */
+  .flower:last-child {
+    border-right: none;
+  }
+  
+  /* Image Styling */
+  .flower img {
+    width: 100%; /* Make image fill the container width */
+    height: 100%; /* Make image fill the container height */
+    object-fit: cover; /* Ensure the image covers the entire area without stretching */
+  }
+  
+  .underline {
+    position: relative; /* Required for positioning the pseudo-element */
+    color: inherit; /* Keep the text color consistent */
+    text-decoration: none; /* Remove default underline */
+}
+
+.underline::after {
+    content: ''; /* Create an empty pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Adjust to control the distance from the text */
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: #EDD4B5; /* Underline color */
+    transition: width 0.3s ease; /* Smooth animation for width expansion */
+}
+
+.underline:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */
+}
+
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3C2417; /* Match the brown background */
+}
+
+/* Top Photo Gallery Section */
+.photo-gallery-top {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between top photos */
+    margin: 20px 0; /* Add space around the top section */
+    padding: 5px;
+    margin-top: -30px;
+}
+
+/* Styling for Individual Top Photos */
+.photo-gallery-top .photo-item {
+    height: 500px; /* Tall */
+    width: 350px; /* Narrow */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid #EDD4B5; /* Beige border */
+}
+
+/* Bottom Photo Gallery Section */
+.photo-gallery-bottom {
+    display: flex;
+    justify-content: center; /* Center the bottom photo */
+    margin: 20px 0; /* Add space around the bottom section */  
+}
+
+/* Styling for the Bottom Photo */
+.photo-gallery-bottom .photo-item-wide {
+    height: 400px; /* Taller */
+    width: 80%; /* Wide */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 1px solid #EDD4B5; /* Beige border */
+}
+
+/* Styling for Images Inside Boxes */
+.photo-item img, .photo-item-wide img {
+    width: 100%; /* Ensure images fit the box width */
+    height: 100%; /* Ensure images fit the box height */
+    object-fit: cover; /* Cover the box area without stretching */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .photo-gallery-top {
+        flex-direction: column; /* Stack top photos vertically */
+        align-items: center; /* Center align the stacked photos */
+    }
+
+    .photo-gallery-bottom .photo-item-wide {
+        width: 100%; /* Make the bottom photo fit the container */
+    }
+}
+
+.about-text2 {
+    background-color: #3C2417; /* Brown background */
+    color: #EDD4B5; /* Light text color */
+    padding: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold; /* Bold text */
+    font-family: 'Athelas', serif; /* Elegant serif font */
+}
+
+
+
+
+
+
+
+
+/* Social */
+
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #3C2417; /* Matching dark brown */
+    color: #f8e7c9; /* Light beige text */
+}
+
+/* Main container */
+.main2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Top container */
+.top-container {
+    display: flex;
+    width: 100%;
+}
+
+.top-container .box {
+    flex: 1;
+    border-right: 1px solid #EDD4B5; /* Border color to match */
+    padding: 50px 20px; /* Adds spacing */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #EDD4B5;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
+
+.top-container .box a {
+    position: relative; /* Needed for pseudo-element positioning */
+    color: #EDD4B5; /* Desired color */
+    text-decoration: none; /* Removes default underline */
+    padding-bottom: 5px; /* Space for underline effect */
+}
+
+/* Pseudo-element for underline */
+.top-container .box a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Hidden by default */
+    height: 1px; /* Thickness of the underline */
+    background-color: #EDD4B5; /* Match link color */
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+/* Hover effect */
+.top-container .box a:hover::after {
+    width: 100%; /* Expands underline */
+}
+
+
+/* Bottom container with images */
+.bottom-container {
+    display: flex;
+    width: 100%;
+    height: 100;
+}
+
+.bottom-container .image-box {
+    flex: 1;
+    border-right: 1px solid  #EDD4B5;
+    border-top: 1px solid #EDD4B5;
+    margin-bottom: -110px;
+}
+
+.bottom-container .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+/* Footer Styles */
+footer {
+    background-color: #3C2417;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    border-top: 1px solid #EDD4B5; /* Add a line above the footer */
+}
+
+/* Footer Links */
+footer .footer-links {
+    margin-top: 10px;
+    margin-bottom: 25px; /* Add space below the footer links */
+}
+
+footer .footer-links a {
+    color: #EDD4B5;
+    text-decoration: none; /* Remove default underline */
+    margin: 0 10px;
+    font-size: 14px;
+    position: relative; /* Needed for the underline effect */
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+    transition: color 0.3s ease;    
+}
+
+/* Add specific spacing for Instagram link */
+footer .footer-links a.instagram {
+    margin-right: 50px; /* Add larger spacing after Instagram */
+}
+
+footer .footer-links a::after {
+    content: ''; /* Empty content */
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #EDD4B5;
+    transition: width 0.3s ease; /* Animate the width */
+}
+
+footer .footer-links a:hover {
+    color: #fff;
+}
+
+/* When the link is hovered, the underline expands */
+footer .footer-links a:hover::after {
+    width: 100%; /* Full width of the link */
+}
+
+/* Footer Paragraph */
+footer p {
+    margin-top: 20px; /* Increase space above the paragraph */
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #EDD4B5;
+    font-family: 'Avenir', 'Avenir Roman', sans-serif;
+}
